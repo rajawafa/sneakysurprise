@@ -42,6 +42,8 @@ img { display: block; max-width: 100%; }
 .site-nav > a:not(.nav-order)::after { position: absolute; right: 0; bottom: -5px; left: 0; height: 2px; content: ""; background: #ffffff; transform: scaleX(0); transform-origin: left; transition: transform 160ms ease; }
 .site-nav > a:hover::after, .site-nav > a:focus-visible::after { transform: scaleX(1); }
 .nav-order { padding: 11px clamp(12px, 1.3vw, 16px); border: 1.5px solid rgba(58, 40, 48, 0.82); border-radius: 999px; background: var(--cream); transition: transform 160ms ease, background 160ms ease, color 160ms ease; }
+.arrow-icon { display: inline-block; width: 0.9em; height: 0.9em; margin-left: 3px; overflow: visible; vertical-align: -0.08em; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+.moment-card a .arrow-icon { flex: 0 0 auto; margin: 0; }
 .nav-order:hover, .nav-order:focus-visible { color: var(--ink); background: var(--butter); transform: translateY(-2px); }
 .menu-toggle { display: none; }
 
