@@ -39,6 +39,18 @@ menuButton?.addEventListener('click', () => {
 });
 
 navigation?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+    const slides = Array.from(carousel.querySelectorAll('img'));
+    let activeIndex = 0;
+
+    window.setInterval(() => {
+      slides[activeIndex].classList.remove('is-active');
+      activeIndex = (activeIndex + 1) % slides.length;
+      slides[activeIndex].classList.add('is-active');
+    }, 4200);
+  });
+}
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && menuButton?.getAttribute('aria-expanded') === 'true') {
